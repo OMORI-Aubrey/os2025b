@@ -14,9 +14,33 @@ func main() {
 		fmt.Println("Kim\nInha\t\"\\") // C언어랑 비슷함
 		fmt.Println('A', '가')          // Rune (유니코드)
 	*/
-	fmt.Println(reflect.TypeOf(2.31))
-	fmt.Println(reflect.TypeOf("go developer~"))
-	fmt.Println(reflect.TypeOf('A'))
-	fmt.Println(reflect.TypeOf(true))
-	fmt.Println(reflect.TypeOf(91))
+	/*
+		fmt.Println(reflect.TypeOf(2.31)) // float64
+		fmt.Println(reflect.TypeOf("go developer~")) //string
+		fmt.Println(reflect.TypeOf('A')) //int32
+		fmt.Println(reflect.TypeOf(true)) //bool
+		fmt.Println(reflect.TypeOf(91)) //int
+	*/
+	// var name string
+	// var id int
+	// name = "Kim Inha"
+	// id = 1000
+	// var name string = "Kim Inha"
+	// var id int = 1000
+
+	// 타입 자동 추론으로 간편하게 선언
+	name := "Kim Inha"
+	id := 1000
+
+	// 선언은 두 번 이상 할 수 없음
+	// id := 1000 () // 이미 위에 선언
+	id = 1000
+
+	// gpa := 3.99 // 자동으로 float64 (double)
+	var gpa float32 = 3.99 // 내가 명시한 자료형으로 선언
+
+	fmt.Println(name, reflect.TypeOf(name))
+	fmt.Println(id, reflect.TypeOf(id))
+	fmt.Println(gpa, reflect.TypeOf(gpa))
+
 }
