@@ -2,15 +2,21 @@ package main
 
 import (
 	"fmt"
-	"math"
-	"strings"
+	"reflect"
 )
 
 func main() {
-	// Floor: 내림, Ceil: 올림, Round: 반올림
-	fmt.Println(math.Round(2.91))
-	// 단어 첫 글자가 대문자가 됨(곧 사라질 함수)
-	fmt.Println(strings.Title("go developer~"))
-	fmt.Println("Kim\nInha\t\"\\") // C언어랑 비슷함
-	fmt.Println('A','가')
+	/*
+		// Floor: 내림, Ceil: 올림, Round: 반올림
+		fmt.Println(math.Round(2.91))
+		// 단어 첫 글자가 대문자가 됨(곧 사라질 함수)
+		fmt.Println(strings.Title("go developer~"))
+		fmt.Println("Kim\nInha\t\"\\") // C언어랑 비슷함
+		fmt.Println('A', '가')          // Rune (유니코드)
+	*/
+	fmt.Println(reflect.TypeOf(2.31))
+	fmt.Println(reflect.TypeOf("go developer~"))
+	fmt.Println(reflect.TypeOf('A'))
+	fmt.Println(reflect.TypeOf(true))
+	fmt.Println(reflect.TypeOf(91))
 }
