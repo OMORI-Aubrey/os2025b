@@ -1,10 +1,5 @@
 package main
 
-import (
-	"fmt"
-	"reflect"
-)
-
 func main() {
 	/*
 		// Floor: 내림, Ceil: 올림, Round: 반올림
@@ -22,40 +17,47 @@ func main() {
 		fmt.Println(reflect.TypeOf(91)) //int
 	*/
 	/*
-		// var name string
-		// var id int
-		// name = "Kim Inha"
-		// id = 1000
-		// var name string = "Kim Inha"
-		// var id int = 1000
+		  // 변수를 선언하면 무조건 한 번 이상 사용
 
-		// 타입 자동 추론으로 간편하게 선언
-		name := "Kim Inha"
-		id := 1000
+			// var name string
+			// var id int
+			// name = "Kim Inha"
+			// id = 1000
+			// var name string = "Kim Inha"
+			// var id int = 1000
 
-		// 선언은 두 번 이상 할 수 없음
-		// id := 1000 () // 이미 위에 선언
-		id = 1000
+			// 타입 자동 추론으로 간편하게 선언
+			name := "Kim Inha"
+			id := 1000
 
-		// gpa := 3.99 // 자동으로 float64 (double)
-		var gpa float32 = 3.99 // 내가 명시한 자료형으로 선언
+			// 선언은 두 번 이상 할 수 없음
+			// id := 1000 () // 이미 위에 선언
+			id = 1000
 
-		fmt.Println(name, reflect.TypeOf(name))
-		fmt.Println(id, reflect.TypeOf(id))
-		fmt.Println(gpa, reflect.TypeOf(gpa))
+			// gpa := 3.99 // 자동으로 float64 (double)
+			var gpa float32 = 3.99 // 내가 명시한 자료형으로 선언
+
+			fmt.Println(name, reflect.TypeOf(name))
+			fmt.Println(id, reflect.TypeOf(id))
+			fmt.Println(gpa, reflect.TypeOf(gpa))
 	*/
+	/*
+		// Zero values
+		var f64 float64 // 0
+		var i16 int16 // 0
+		var t bool // false
+		var s string // 빈 문자열
+		var i int // 0
 
-	// Zero values
-	var f64 float64
-	var i16 int16
-	var t bool
-	var s string
-	var i int
+		fmt.Println(f64, reflect.TypeOf(f64))
+		fmt.Println(i16, reflect.TypeOf(i16))
+		fmt.Println(t, reflect.TypeOf(t))
+		fmt.Println(s, reflect.TypeOf(s))
+		fmt.Println(i, reflect.TypeOf(i))
+	*/
+	// 변수 이름 규칙
+	// var 64f float64 // 숫자로 시작하면 안됨
+	// totalPrice := 1000 // 소문자로 시작: 패키지 내부에서만 접근 가능
+	// TotalPrice := 1000 // 대문자로 시작: 외부 패키지에서도 접근 가능
 
-	fmt.Println(f64, reflect.TypeOf(f64))
-	fmt.Println(i16, reflect.TypeOf(i16))
-	fmt.Println(t, reflect.TypeOf(t))
-	fmt.Println(s, reflect.TypeOf(s))
-	fmt.Println(i, reflect.TypeOf(i))
-	
 }
