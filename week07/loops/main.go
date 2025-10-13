@@ -36,7 +36,7 @@ func main() {
 	fmt.Println(month, day)
 }
 */
-
+/*
 import (
 	"fmt"
 	"strings"
@@ -48,4 +48,18 @@ func main() {
 	changed := changer.Replace(univ)
 
 	fmt.Println(changed)
+}
+*/
+
+import (
+	"bufio" // bufio: BUFfer Input Output
+	"fmt"
+	"os" // os: Operating System
+)
+
+func main() {
+	r := bufio.NewReader(os.Stdin)
+	// return값 두 개 필요 -> 다중 return 가능
+	i, _ := r.ReadString('\n') // '' 안에 있는 글자 까지 입력받음 -> '\n' : \n까지 입력받음
+	fmt.Println(i)
 }
