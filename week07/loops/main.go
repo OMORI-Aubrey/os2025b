@@ -71,15 +71,49 @@ func main() {
 	fmt.Println(i)
 }
 */
-
+/*
 import "fmt"
 
 func main() {
 	//shadowing
-	/*var int int = 99 // 예약어를 변수이름으로 사용하면 원래 기능이 사라짐 (shadowing)
-	var b int = 8*/
+	// var int int = 99 // 예약어를 변수이름으로 사용하면 원래 기능이 사라짐 (shadowing)
+	// var b int = 8
 
-	/*var fmt string = "inha" // 이것도 마찬가지, fmt의 기능이 가려져서 import "fmt"(fmt 정의)도 안됨
-	fmt.Println(fmt)*/
+	// var fmt string = "inha" // 이것도 마찬가지, fmt의 기능이 가려져서 import "fmt"(fmt 정의)도 안됨
+	// fmt.Println(fmt)
 	fmt.Println()
+}
+*/
+
+import (
+	"bufio"
+	"fmt"
+	"log"
+	"os"
+	"strconv"
+	"strings"
+)
+
+func main() {
+	fmt.Println("점수 입력")
+
+	r := bufio.NewReader(os.Stdin)
+	i, err := r.ReadString('\n')
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	i = strings.TrimSpace(i)                // 문자열 주위에 있는 양쪽 여백이나 공백 제거(Trim)
+	score, err := strconv.ParseFloat(i, 64) // 정리된 문자열을 실수 타입으로 변환
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	var status string
+	if score >= 60 {
+		status = "Pass"
+	} else {
+		status = "Fail"
+	}
+	fmt.Println(score, status)
 }
