@@ -54,12 +54,19 @@ func main() {
 import (
 	"bufio" // bufio: BUFfer Input Output
 	"fmt"
+	"log"
 	"os" // os: Operating System
 )
 
 func main() {
 	r := bufio.NewReader(os.Stdin)
-	// return값 두 개 필요 -> 다중 return 가능
-	i, _ := r.ReadString('\n') // '' 안에 있는 글자 까지 입력받음 -> '\n' : \n까지 입력받음
+	// return값 두 개 필요 -> 다중 리턴 가능
+	i, err := r.ReadString('\n') // '' 안에 있는 글자 까지 입력받음 -> '\n' : \n까지 입력받음
+	// i, _ := r.ReadString('\n') // 변수 _ 는 값을 받지만 사용하지 않겠다는 뜻(리턴값 무시)
+
+	if err != nil { // nil: zero value (값 없음, 아무것도 가리키지 않음)
+		log.Fatal(err) //에러 메시지 보고, 프로그램 종료
+	}
+
 	fmt.Println(i)
 }
