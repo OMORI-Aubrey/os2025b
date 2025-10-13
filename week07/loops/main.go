@@ -50,7 +50,7 @@ func main() {
 	fmt.Println(changed)
 }
 */
-
+/*
 import (
 	"bufio" // bufio: BUFfer Input Output
 	"fmt"
@@ -69,4 +69,17 @@ func main() {
 	}
 
 	fmt.Println(i)
+}
+*/
+
+import "fmt"
+
+func main() {
+	//shadowing
+	/*var int int = 99 // 예약어를 변수이름으로 사용하면 원래 기능이 사라짐 (shadowing)
+	var b int = 8*/
+
+	/*var fmt string = "inha" // 이것도 마찬가지, fmt의 기능이 가려져서 import "fmt"(fmt 정의)도 안됨
+	fmt.Println(fmt)*/
+	fmt.Println()
 }
