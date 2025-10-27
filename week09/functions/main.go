@@ -31,7 +31,7 @@ func main() {
 	fmt.Printf("%0.2f liters needed\n", amount)
 }
 */
-
+/*
 import (
 	"fmt"
 	"math" // 수학 관련 함수들이 모두 들어있음
@@ -40,4 +40,24 @@ import (
 func main() {
 	fmt.Println(math.Sqrt(16.0))
 	fmt.Println(math.Sqrt(-16.0)) // NAN : 음수 값은 구할 수 없음
+}
+*/
+
+import "fmt"
+
+// 두 수 교환 함수
+func swap(first int, second int) {
+	temp := first
+	first = second
+	second = temp
+
+	fmt.Println(first, second)
+}
+
+func main() {
+	a, b := 10, 20
+	fmt.Println(a, b)
+
+	swap(a, b)
+	fmt.Println(a, b)
 }
