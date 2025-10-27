@@ -42,10 +42,10 @@ func main() {
 	fmt.Println(math.Sqrt(-16.0)) // NAN : 음수 값은 구할 수 없음
 }
 */
-
+/*
 import "fmt"
 
-// 두 수 교환 함수
+// 두 수 교환 함수 (포인터 X)
 func swap(first int, second int) {
 	temp := first
 	first = second
@@ -58,6 +58,26 @@ func main() {
 	a, b := 10, 20
 	fmt.Println(a, b)
 
-	swap(a, b)
+	swap(a, b) // pass by value : 값을 보내 원본 변경 X
+	fmt.Println(a, b)
+}
+*/
+
+import "fmt"
+
+// 두 수 교환 함수 (포인터 O)
+func swap(first *int, second *int) {
+	temp := *first
+	*first = *second
+	*second = temp
+
+	fmt.Println(*first, *second)
+}
+
+func main() {
+	a, b := 10, 20
+	fmt.Println(a, b)
+
+	swap(&a, &b) // pass by pointer : 주소를 보내 원본 변경
 	fmt.Println(a, b)
 }
