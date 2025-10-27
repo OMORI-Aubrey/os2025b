@@ -1,5 +1,7 @@
 package main
 
+/*
+// 안에 숫자 바꿔보기 (애러 확인)
 import (
 	"fmt"
 	"log"
@@ -27,4 +29,15 @@ func main() {
 		log.Fatal(err)
 	}
 	fmt.Printf("%0.2f liters needed\n", amount)
+}
+*/
+
+import (
+	"fmt"
+	"math" // 수학 관련 함수들이 모두 들어있음
+)
+
+func main() {
+	fmt.Println(math.Sqrt(16.0))
+	fmt.Println(math.Sqrt(-16.0)) // NAN : 음수 값은 구할 수 없음
 }
