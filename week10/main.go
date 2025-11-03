@@ -1,8 +1,6 @@
 package main
 
-import (
-	"greeting"
-)
+import "week10/pkg/greeting" // 외부 패키지 경로를 바꿨으면 이렇게 지정해주기
 
 func main() {
 	// 우리가 직접 만든 커스텀 패키지
