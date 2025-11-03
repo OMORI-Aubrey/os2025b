@@ -57,7 +57,7 @@ func main() {
 	fmt.Println(reflect.TypeOf(arrayInt)) // 타입만 보여줌
 }
 */
-
+/*
 import (
 	"fmt"
 )
@@ -65,7 +65,7 @@ import (
 func main() {
 	// arrayBool := [3]bool{true, false} // 값 안넣어주면 자동으로 zero value
 	arrayBool := [2]bool{true, false}
-		arrayInt := [3]int{-9, 11, 7}
+	arrayInt := [3]int{-9, 11, 7}
 
 	// for i := 0; i < 3; i++ { // 없는 인덱스의 값을 찍으면 에러
 	// for i := 0; i < len(arrayInt); i++ { // 둘이 길이가 달라서 에러
@@ -75,5 +75,17 @@ func main() {
 		fmt.Println(i, arrayBool[i])
 		fmt.Println(i, arrayInt[i])
 	}
+}
+*/
 
+import (
+	"fmt"
+)
+
+func main() {
+	numbers := [3]int{-9, 11, 7}
+
+	for i, number := range numbers {
+		fmt.Println(i, number)
+	}
 }
