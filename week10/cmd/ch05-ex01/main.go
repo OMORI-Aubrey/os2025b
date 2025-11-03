@@ -25,7 +25,8 @@ import (
 
 func main() {
 	// 크기가 3인 배열 선언
-	var arrayBool [3]bool = [3]bool{true, false, true} // 배열 리터럴
+	// var arrayBool [3]bool = [3]bool{true, false, true} // 배열 리터럴
+	arrayBool := [3]bool{true, false, true} 
 	var arrayInt [3]int
 
 	fmt.Println(arrayBool[1])
