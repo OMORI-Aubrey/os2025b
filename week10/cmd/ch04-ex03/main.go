@@ -14,8 +14,7 @@ func main() {
 		log.Fatal(err)
 	}
 
-	var celsius float64
-	celsius = (fahrenheit - 32) * 5 / 9
+	celsius := (fahrenheit - 32) * 5 / 9
 
 	fmt.Printf("화씨 %0.2f는 섭씨 %0.2f도 입니다.\n", fahrenheit, celsius)
 
