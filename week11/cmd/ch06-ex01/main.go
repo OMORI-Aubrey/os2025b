@@ -3,11 +3,14 @@ package main
 import "fmt"
 
 func main() {
-	var subjects []string
-	subjects = make([]string, 3)
+	// var subjects []string
+	// subjects = make([]string, 3)
+	// subjects := make([]string, 3)
 
-	subjects[0] = "Go"
-	subjects[2] = "Python"
+	// subjects[0] = "Go"
+	// subjects[2] = "Python"
+
+	subjects := []string{"Go", "", "Python"} // slice literal
 
 	for _, subject := range subjects {
 		fmt.Println(subject)
