@@ -1,5 +1,6 @@
 package main
 
+/*
 import (
 	"fmt"
 	"log"
@@ -33,5 +34,29 @@ func main() {
 
 	for i, name := range names {
 		fmt.Println(name, ":", counts[i])
+	}
+}
+*/
+
+import (
+	"fmt"
+	"log"
+	"github.com/headfirstgo/datafile"
+)
+
+// map을 사용하여 개선한 버전
+func main() {
+	lines, err := datafile.GetStrings("votes.txt")
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	counts := make(map[string]int)
+	for _, line := range lines {
+		counts[line]++
+	}
+
+	for name, count := range counts {
+		fmt.Println(name, ":", count)
 	}
 }
