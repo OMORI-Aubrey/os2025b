@@ -4,6 +4,7 @@ package main
 import (
 	"fmt"
 	"log"
+	
 	"github.com/headfirstgo/datafile"
 )
 
@@ -41,6 +42,7 @@ func main() {
 import (
 	"fmt"
 	"log"
+
 	"github.com/headfirstgo/datafile"
 )
 
