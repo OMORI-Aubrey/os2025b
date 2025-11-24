@@ -1,6 +1,9 @@
 package calendar
 
-import "errors"
+import (
+	"errors"
+	"fmt"
+)
 
 type Date struct {
 	year  int
@@ -8,7 +11,13 @@ type Date struct {
 	day   int
 }
 
+func welcome() { // 외부에 노출 X
+	fmt.Println("환영합니다")
+}
+
+// getter method
 func (d *Date) Year() int {
+	welcome() // OK
 	return d.year
 }
 func (d *Date) Month() int {
@@ -17,6 +26,8 @@ func (d *Date) Month() int {
 func (d *Date) Day() int {
 	return d.day
 }
+
+// setter method
 func (d *Date) SetYear(year int) error {
 	if year < 1 {
 		return errors.New("invalid year")
