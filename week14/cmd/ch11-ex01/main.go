@@ -72,12 +72,12 @@ func (b Bulbasaur) Attack() int {
 func (b Bulbasaur) Defense() int {
 	return 49
 }
+// 메소드가 더 있어됨. 대신 모자르면 애러
 
 // Pokemon을 파라미터로 받는 함수
 func printPokemonInfo(p Pokemon) {
 	fmt.Printf("%s (%s)\n", p.Name(), p.Type())
-	fmt.Printf("공격: %d, 방어: %d\n\n",
-		p.Attack(), p.Defense())
+	fmt.Printf("공격: %d, 방어: %d\n\n", p.Attack(), p.Defense())
 }
 
 func main() {
